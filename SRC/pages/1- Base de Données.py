@@ -22,7 +22,7 @@ st.set_page_config(page_title="Base de Données",
 # Load compressed pickle file
 @st.cache_data
 def df():
-    data = bz2.BZ2File('SRC/df_map_2.pbz2', 'rb')
+    data = bz2.BZ2File('SRC/df_map.pbz2', 'rb')
     data = cPickle.load(data)
     data.reset_index(drop=True, inplace=True)
     return data

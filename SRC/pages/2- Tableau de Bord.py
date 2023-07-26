@@ -23,7 +23,7 @@ st.image(image, width=1250)
 # Load compressed pickle file
 @st.cache_data
 def map():
-    data = bz2.BZ2File('SRC/df_map_2.pbz2', 'rb')
+    data = bz2.BZ2File('SRC/df_map.pbz2', 'rb')
     data = cPickle.load(data)
     data=data[
     data['Region']=='Pays de la Loire'
@@ -128,11 +128,12 @@ for i in range(len(df_map)):
            {df_map.iloc[i]['Département']}
            <br><br>
            <li><a href={df_map.iloc[i]['Site_web'][0]}>Site web</a></li>
+           <br><br>
+           {df_map.iloc[i]['Description']}
        </ul>
        </p>
        """
-        #    <br><br>
-        #    {df_map.iloc[i]['Description']}
+
     iframe = folium.IFrame(html=html, width=300, height=500)
     popup = folium.Popup(iframe, max_width=2650)
 
