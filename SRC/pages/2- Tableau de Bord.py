@@ -60,7 +60,7 @@ departement = st.sidebar.selectbox(
 'Département', liste_dpts, index=liste_dpts.index('Loire-Atlantique'), 
 )
 df_map = df_map[
-    df_map.Département.str.contains(departement)
+    df_map['Département'].str.contains(departement)
     ]
 df_map.reset_index(drop=True, inplace=True)
 

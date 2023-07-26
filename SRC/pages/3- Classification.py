@@ -82,7 +82,7 @@ region = st.sidebar.selectbox(
 'Région', liste_regions, index=liste_regions.index('Occitanie')
 )
 df_explo = df_explo[
-    df_explo.Région.str.contains(region)
+    df_explo['Région'].str.contains(region)
     ]
 df_explo.reset_index(drop=True, inplace=True)
 
