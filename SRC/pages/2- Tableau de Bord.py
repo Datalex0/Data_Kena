@@ -70,7 +70,7 @@ df_map.reset_index(drop=True, inplace=True)
 liste_categories = df_map['Categorie'].unique().tolist()
 liste_categories.sort()
 categorie = st.sidebar.selectbox(
-'Catégorie', liste_categories, index=liste_categories.index('Transport')
+'Catégorie', liste_categories, index=liste_categories.index('Site Culturel')
 )
 df_map = df_map[
     df_map.Categorie.str.contains(categorie)
