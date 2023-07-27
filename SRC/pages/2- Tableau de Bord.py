@@ -17,7 +17,7 @@ st.set_page_config(page_title="Tableau de Bord",
                    layout='wide')
 
 # Afficher image
-image = Image.open('SRC/Carte interactive.png')
+image = Image.open('SRC/Carte Interactive.png')
 st.image(image, width=1250)
 
 # Load compressed pickle file
