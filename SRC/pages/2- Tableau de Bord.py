@@ -25,9 +25,9 @@ st.image(image, width=1250)
 def map():
     data = bz2.BZ2File('SRC/df_map.pbz2', 'rb')
     data = cPickle.load(data)
-    data=data[
-    data['Region']=='Pays de la Loire'
-              ]
+    #data=data[
+    #data['Region']=='Pays de la Loire'
+    #          ]
     data.reset_index(drop=True, inplace=True)
     return data
 df_map =map()
@@ -47,10 +47,10 @@ liste_regions.sort()
 region = st.sidebar.selectbox(
 'Région', liste_regions, index=liste_regions.index('Pays de la Loire')
 )
-# df_map = df_map[
-#     df_map.Region.str.contains(region)
-#     ]
-# df_map.reset_index(drop=True, inplace=True)
+df_map = df_map[
+    df_map.Region.str.contains(region)
+    ]
+df_map.reset_index(drop=True, inplace=True)
 
 
 # Menu déroulant des DEPARTEMENTS
