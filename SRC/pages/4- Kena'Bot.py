@@ -85,6 +85,8 @@ if response2 :
     time.sleep(0.5)
     message.write(response2)
     prompt = st.chat_input("Ecris la description ici")
+    st.caption("Exemple de description : Le 'Logis Hôtel la Bonne Auberge' dans la Creuse :")
+    st.caption("Situé en pleine campagne, cet hôtel simple se trouve à 14 km du château de Boussac et à 23 km de la route nationale N145. Dotées de murs aux touches colorées, les chambres à l'atmosphère détendue disposent du Wi-Fi gratuit et d'une télévision à écran plat. Celles de catégorie supérieure comprennent en outre un lit à baldaquin. Les suites sont pourvues de chambres communicantes. L'établissement possède un restaurant convivial doté de poutres apparentes au plafond et d'une terrasse. Il comporte également un jardin et un espace de réunion. Le petit-déjeuner est payant.")
 if prompt :
     moi = st.chat_message("user")
     moi.write("Voilà la description")
