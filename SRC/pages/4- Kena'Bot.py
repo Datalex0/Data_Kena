@@ -51,7 +51,7 @@ message.write("Hello ! Enchanté, je suis Kena'Bot ! :wave:")
 message.write("Comment puis-je t'aider aujourd'hui?")
 
 # Liste des options disponibles
-options = ["J\'ai besoin de tes conseils pour une classification", "J'ai un doute sur des coordonnées géographiques", "J\'ai une autre question", "Rien, juste te dire bonjour",]
+options = ["J\'ai besoin de tes conseils pour une classification", "J'ai un doute sur des coordonnées géographiques (en projet)", "J\'ai une autre question (en projet)", "Rien, juste te dire bonjour",]
 
 # Liste pour stocker les options sélectionnées
 selected_options = []
@@ -69,9 +69,9 @@ if 'Rien, juste te dire bonjour' == choice:
 if 'J\'ai besoin de tes conseils pour une classification' == choice:
     response0 = "Ca marche, allons-y ! :smiley:"
     response2 = "Quelle est la description de l'établissement ?"
-if "J'ai un doute sur des coordonnées géographiques" == choice : 
+if "J'ai un doute sur des coordonnées géographiques (en projet)" == choice : 
     response = "Allons vérifier ça !"
-if "J\'ai une autre question" == choice :
+if "J\'ai une autre question (en projet)" == choice :
     response = "Bientôt tu pourras retrouver de nouvelles fonctionalités ! "
 
 # Afficher le message final
