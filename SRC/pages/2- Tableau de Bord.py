@@ -146,4 +146,5 @@ for i in range(len(df_map)):
 
 cluster_poi.add_to(m)
 fig.add_child(m)
-folium_static(fig)
+#folium_static(fig)
+st_folium(fig)
